@@ -2,7 +2,6 @@ import { IoHeartOutline, IoHeart} from 'react-icons/io5'
 import { useState, useEffect } from 'react'
 import { addCharacterToFav } from 'nf-ecomm-api'
 
-
 const ButtonFav = ( { context, character={}, className='btn primary' } ) => {
     
     const { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } = context
@@ -29,15 +28,12 @@ const ButtonFav = ( { context, character={}, className='btn primary' } ) => {
             className={className}
             onClick={ handleOnClick }
         >
-            {isFav ? 
+        {isFav ? 
             <IoHeartOutline className="mr" /> : 
             <IoHeart className="mr" />
-            
         }
         </button>
     )
 }
-
-// const ButtonFav = (props)=> <GlobalProvider><ButtonLogic props={props}/></GlobalProvider>
 
 export default ButtonFav

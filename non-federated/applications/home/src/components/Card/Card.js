@@ -7,7 +7,7 @@ import './Card.css'
 const Card = ( { character } ) => {
     return (
         <article>
-            <ButtonFav context={{GLOBALACTIONS: GLOBALACTIONS, useGlobalContext: useGlobalContext, useGlobalUpdateContext: useGlobalUpdateContext }} character />
+            <ButtonFav context={{GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext }} character={character} />
             <NavLink className="item" to={ `/characters/${character.id}` } >
                 <div className="picture">
                     <img className="frame" src={ portal } alt={ character.name } />
