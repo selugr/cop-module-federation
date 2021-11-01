@@ -5831,6 +5831,8 @@ __metadata:
     jest-transform-css: ^2.1.0
     mini-css-extract-plugin: ^2.2.0
     nf-ecomm-api: ../../middlewares/api
+    nf-ecomm-components: ../../components/ButtonFav
+    nf-ecomm-frame: ../../components/Frame
     prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -12736,8 +12738,44 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=cop-module-federation%40workspace%3Aapplications%2Fhome":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=e5f982&locator=cop-module-federation%40workspace%3Aapplications%2Fhome"
-  checksum: 48ceef08559f1509917ca4a900915ae3ba6edc29c42e6098e4fd9e996f0d3ce7ff12315e56a24c43a2c4a9231c13b9d5c742d94b16c88f65d9e9f3049fcf1316
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f67678&locator=cop-module-federation%40workspace%3Aapplications%2Fhome"
+  checksum: 8a773a0d79b7c488e8fccac312f1714ed5acf606f92e2462c7f2f57f9bdc037547b84e55bc5d741dc9ce134e9e2c7e5674848d3e912946c75be1ae0060945ec9
+  languageName: node
+  linkType: hard
+
+"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3Dd4761c%26locator%3Dcop-module-federation%2540workspace%253Aapplications%252Fhome":
+  version: 1.0.0
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f67678&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3Dd4761c%26locator%3Dcop-module-federation%2540workspace%253Aapplications%252Fhome"
+  checksum: 8a773a0d79b7c488e8fccac312f1714ed5acf606f92e2462c7f2f57f9bdc037547b84e55bc5d741dc9ce134e9e2c7e5674848d3e912946c75be1ae0060945ec9
+  languageName: node
+  linkType: hard
+
+"nf-ecomm-components@file:../../components/ButtonFav::locator=cop-module-federation%40workspace%3Aapplications%2Fhome":
+  version: 0.1.0
+  resolution: "nf-ecomm-components@file:../../components/ButtonFav#../../components/ButtonFav::hash=d4761c&locator=cop-module-federation%40workspace%3Aapplications%2Fhome"
+  dependencies:
+    nf-ecomm-api: ../../middlewares/api
+    nf-ecomm-frame: ../Frame
+    react: ^17.0.2
+  checksum: c809cea58193b29bc3e78d91eb6bd51c1ff21509a915c850ea71f8700d159327dceff0933e57f8cac257131a1f2079f5cf441f13aed557ed7c5f37dc034ca30f
+  languageName: node
+  linkType: hard
+
+"nf-ecomm-frame@file:../../components/Frame::locator=cop-module-federation%40workspace%3Aapplications%2Fhome":
+  version: 0.1.0
+  resolution: "nf-ecomm-frame@file:../../components/Frame#../../components/Frame::hash=0d1ac5&locator=cop-module-federation%40workspace%3Aapplications%2Fhome"
+  dependencies:
+    react: ^17.0.2
+  checksum: 50b15ab9d31a8859f0f1e28dbce755b32c918f41bbcbe0f27fe15d9d13ce52a22d2c03626be2f50f82a5de8741e74edebc97741ba671b2268f8f70a39b94b08c
+  languageName: node
+  linkType: hard
+
+"nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3Dd4761c%26locator%3Dcop-module-federation%2540workspace%253Aapplications%252Fhome":
+  version: 0.1.0
+  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=0d1ac5&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3Dd4761c%26locator%3Dcop-module-federation%2540workspace%253Aapplications%252Fhome"
+  dependencies:
+    react: ^17.0.2
+  checksum: 50b15ab9d31a8859f0f1e28dbce755b32c918f41bbcbe0f27fe15d9d13ce52a22d2c03626be2f50f82a5de8741e74edebc97741ba671b2268f8f70a39b94b08c
   languageName: node
   linkType: hard
 

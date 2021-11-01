@@ -6894,8 +6894,13 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40workspace%3A.":
   version: 1.0.0
+<<<<<<< Updated upstream:non-federated/components/shared-ui/yarn.lock
   resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=8388a8&locator=nf-ecomm-components%40workspace%3A."
   checksum: 3565913f07893034b2fff489cbdc672430f3a5a4d874ed655f3b6884d4bb3e86db5c21d33abecf13b6ab24b8363262c4d5523323815f2e4083d9154f2f84891e
+=======
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=nf-ecomm-components%40workspace%3A."
+  checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
+>>>>>>> Stashed changes:non-federated/components/ButtonFav/yarn.lock
   languageName: node
   linkType: hard
 
@@ -6945,10 +6950,17 @@ __metadata:
 
 "nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40workspace%3A.":
   version: 0.1.0
+<<<<<<< Updated upstream:non-federated/components/shared-ui/yarn.lock
   resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=94e512&locator=nf-ecomm-components%40workspace%3A."
   dependencies:
     react: ^17.0.2
   checksum: 3b2930a30335449d15fe539b6be10d347906c74074309708d3eef1929da385ff833f3aa666405749a4d5a1de4b0902426981da7f49212936065137eaaaf6f07f
+=======
+  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=66e6e6&locator=nf-ecomm-components%40workspace%3A."
+  dependencies:
+    react: ^17.0.2
+  checksum: ffd318525a47acf02bf26aaba18948204207a7dfcb4eeb3a6469341a2a053aea6b1b8a5d30088a5a58f8a3158bcc7caeed4d81db9bcab7a687fcb6b923c43773
+>>>>>>> Stashed changes:non-federated/components/ButtonFav/yarn.lock
   languageName: node
   linkType: hard
 
