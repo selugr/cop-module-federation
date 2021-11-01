@@ -1,0 +1,18 @@
+.loader-icon {
+    color: var(--color-4);
+    font-size: 2rem;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    /* from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); } */
+    0% { transform: rotate(0deg) scale(75%); }
+    25% { transform: rotate(90deg) scale(125%); }
+    50% { transform: rotate(180deg) scale(75%); }
+    75% { transform: rotate(270deg) scale(125%); }
+    100% { transform: rotate(360deg) scale(75%); }
+}
