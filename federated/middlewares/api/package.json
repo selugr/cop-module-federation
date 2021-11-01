@@ -1,0 +1,15 @@
+{
+  "name": "nf-ecomm-api",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "babel --watch src --out-dir dist"
+  },
+  "main": "dist/index.js",
+  "author": "Selugr",
+  "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8"
+  }
+}

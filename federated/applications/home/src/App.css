@@ -1,0 +1,79 @@
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+main > div {
+    max-width: var(--container-max-width);
+    width: 100%;
+    padding: 1rem;
+}
+
+.btn {
+    height: 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--color-3);
+    color: var(--color-1);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: background-color var(--time-transition);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.btn:hover,
+.btn:disabled {
+    background-color: var(--color-medium);
+}
+
+.btn-icon {
+    width: 4rem;
+}
+
+.primary {
+    background-color: var(--color-3);
+}
+
+.secondary {
+    background-color: var(--color-4);
+}
+
+.icon {
+    font-size: 1.7rem;
+    color: var(--color-4);
+    transition: color var(--time-transition);
+}
+
+.loader-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 60rem) and (max-width: 75rem) {
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 37rem) {
+    .btn {
+        width: 100%;
+    }
+}

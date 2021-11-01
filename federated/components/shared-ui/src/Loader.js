@@ -1,6 +1,6 @@
 import './Loader.css'
 
-import logo from '../../res/img/logo.png'
+import logo from './logo.png'
 
 const Loader = () => {
     return (
