@@ -12672,26 +12672,26 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=cop-module-federation%40workspace%3A.":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=cop-module-federation%40workspace%3A."
-  checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=4ef77a&locator=cop-module-federation%40workspace%3A."
+  checksum: 1f042c07d925e2080d6d15f0118f654223a647c7aa2f155653348ae5c4409bbfd8868016bd6f9f3f22b581e9cd2e5a818f362aaa56dbc015552ee8220198d3bf
   languageName: node
   linkType: hard
 
-"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3D415faf%26locator%3Dcop-module-federation%2540workspace%253A.":
+"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3D5a57da%26locator%3Dcop-module-federation%2540workspace%253A.":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3D415faf%26locator%3Dcop-module-federation%2540workspace%253A."
-  checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=4ef77a&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3D5a57da%26locator%3Dcop-module-federation%2540workspace%253A."
+  checksum: 1f042c07d925e2080d6d15f0118f654223a647c7aa2f155653348ae5c4409bbfd8868016bd6f9f3f22b581e9cd2e5a818f362aaa56dbc015552ee8220198d3bf
   languageName: node
   linkType: hard
 
 "nf-ecomm-components@file:../../components/shared-ui::locator=cop-module-federation%40workspace%3A.":
   version: 0.1.0
-  resolution: "nf-ecomm-components@file:../../components/ButtonFav#../../components/ButtonFav::hash=415faf&locator=cop-module-federation%40workspace%3A."
+  resolution: "nf-ecomm-components@file:../../components/shared-ui#../../components/shared-ui::hash=5a57da&locator=cop-module-federation%40workspace%3A."
   dependencies:
     nf-ecomm-api: ../../middlewares/api
     nf-ecomm-frame: ../Frame
     react: ^17.0.2
-  checksum: 355fee874718b3c0a3e740e128a1f77b994657da0b9085a9d87dac677e8c7742ea904b71dbcaf4238afbcec9838473e50ff83cf41b1ad050a4bed0d7413bb241
+  checksum: 82335969d7d1697db26c8983d862544f9b0923250d496b712bdc04950a2a44614e0b48ee796c86d5a630545068ba130838f6df73142cbdbb6d38ff783adf705e
   languageName: node
   linkType: hard
 
@@ -12704,9 +12704,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3D415faf%26locator%3Dcop-module-federation%2540workspace%253A.":
+"nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3D5a57da%26locator%3Dcop-module-federation%2540workspace%253A.":
   version: 0.1.0
-  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=66e6e6&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3D415faf%26locator%3Dcop-module-federation%2540workspace%253A."
+  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=94e512&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3D5a57da%26locator%3Dcop-module-federation%2540workspace%253A."
   dependencies:
     react: ^17.0.2
   checksum: ffd318525a47acf02bf26aaba18948204207a7dfcb4eeb3a6469341a2a053aea6b1b8a5d30088a5a58f8a3158bcc7caeed4d81db9bcab7a687fcb6b923c43773

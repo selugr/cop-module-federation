@@ -34,6 +34,7 @@
 }
 
 .character-grid > .info {
+    position: relative;
     grid-area: details;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     border: solid 0.5rem var(--color-white);

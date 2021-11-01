@@ -1,8 +1,9 @@
 import { IoHeartOutline, IoHeart} from 'react-icons/io5'
 import { useState, useEffect } from 'react'
-import { addCharacterToFav } from 'nf-ecomm-api'
+import { addCharacterToFav, getFavs } from 'nf-ecomm-api'
+import './ButtonFav.css'
 
-const ButtonFav = ( { context, character={}, className='btn primary' } ) => {
+const ButtonFav = ( { context, character={}, className='fav-button' } ) => {
     
     const { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } = context
     const { characterFavs } = useGlobalContext([])
@@ -23,14 +24,19 @@ const ButtonFav = ( { context, character={}, className='btn primary' } ) => {
         setIsFav(characterFavs.find(c => c.id === character.id))
     }, [characterFavs])
 
+    useEffect(()=>{
+        const currentFavs = getFavs()
+        setIsFav(currentFavs.find(c => c.id === character.id))
+    }, [])
+
     return (
         <button
             className={className}
             onClick={ handleOnClick }
         >
         {isFav ? 
-            <IoHeartOutline className="mr" /> : 
-            <IoHeart className="mr" />
+            <IoHeart/> : 
+            <IoHeartOutline/>
         }
         </button>
     )

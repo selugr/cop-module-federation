@@ -6,7 +6,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist && cp src/*.css dist",
     "start": "babel --watch src --out-dir dist",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
