@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "nf-ecomm-api": "../../middlewares/api",
-    "nf-ecomm-frame": "../Frame",
+    "nf-ecomm-frame": "../frame",
     "react": "^17.0.2"
   },
   "devDependencies": {

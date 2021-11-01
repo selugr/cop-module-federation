@@ -6894,8 +6894,8 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40workspace%3A.":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=46f413&locator=nf-ecomm-components%40workspace%3A."
-  checksum: 27aacb014666832a39b8405946d870d4e4e7be9dacbe707150b8c55c9b2a5b8a4175150a9c8185b04c66dd5111a2b51264b6dca04f11cb27257ad3bab6719ed0
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=7628db&locator=nf-ecomm-components%40workspace%3A."
+  checksum: 0e215b0cab5b191b4a574c18e66e199953d99193f52eac73920738eee611cd66679f58b2c4417ba5087e8ab63b15d7a6f16c06c3b5afccc97e21873397037a89
   languageName: node
   linkType: hard
 
@@ -6931,7 +6931,7 @@ __metadata:
     jest-transform-css: ^2.1.0
     mini-css-extract-plugin: ^2.2.0
     nf-ecomm-api: ../../middlewares/api
-    nf-ecomm-frame: ../Frame
+    nf-ecomm-frame: ../frame
     prettier: ^2.4.1
     react: ^17.0.2
     react-refresh: ^0.10.0
@@ -6943,12 +6943,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40workspace%3A.":
+"nf-ecomm-frame@file:../frame::locator=nf-ecomm-components%40workspace%3A.":
   version: 0.1.0
-  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=e5551c&locator=nf-ecomm-components%40workspace%3A."
+  resolution: "nf-ecomm-frame@file:../frame#../frame::hash=30d3cb&locator=nf-ecomm-components%40workspace%3A."
   dependencies:
     react: ^17.0.2
-  checksum: 00f028b07c109b93513a3b8c524ab5cad8f19037f295a8860b957ce0bf1439f48d0f1a3160ec580ae730db6e1b2ec825c6b67fa86562ca8970e6021022af7094
+    react-dom: ^17.0.2
+  checksum: 7e1bc598b4dbd7abc85b1461d2b6f93505c4abb5f049a721387dd51a149c7ee04ba05f2320dd6251b729a306d83cfe40384001f930d25f77f86c0d19d0c98f52
   languageName: node
   linkType: hard
 
@@ -7940,6 +7941,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-dom@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    scheduler: ^0.20.2
+  peerDependencies:
+    react: 17.0.2
+  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -8388,6 +8402,16 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 5636b55cf15f7cf0baa73f2797bf992bdcf75d1b39d82c0aa4608555c774368f6ac321cb641fd5f3d3ceb87805122cd47540da6a7b5960fe0dbdb8f8c263f000
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.20.2":
+  version: 0.20.2
+  resolution: "scheduler@npm:0.20.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
   languageName: node
   linkType: hard
 
