@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Loader from '../../../components/Loader/Loader'
 import { getCharacterById } from 'nf-ecomm-api'
+import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
+import { ButtonFav } from 'nf-ecomm-components'
 import './CharacterDetails.css'
 
 const CharacterDetails = () => {
@@ -55,6 +57,16 @@ const CharacterDetails = () => {
                         <h2>LOCATION:</h2>
                         <p>{character.location.name}</p>
                     </section>
+                    <ButtonFav 
+                        context={
+                            {
+                                GLOBALACTIONS, 
+                                useGlobalContext, 
+                                useGlobalUpdateContext 
+                            }
+                        } 
+                        character={character}
+                    />
                 </div>
             </div>
         </div>
