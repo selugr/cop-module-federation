@@ -12672,17 +12672,6 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=cop-module-federation%40workspace%3A.":
   version: 1.0.0
-<<<<<<< Updated upstream
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=8388a8&locator=cop-module-federation%40workspace%3A."
-  checksum: 3565913f07893034b2fff489cbdc672430f3a5a4d874ed655f3b6884d4bb3e86db5c21d33abecf13b6ab24b8363262c4d5523323815f2e4083d9154f2f84891e
-  languageName: node
-  linkType: hard
-
-"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Deb644c%26locator%3Dcop-module-federation%2540workspace%253A.":
-  version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=8388a8&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Deb644c%26locator%3Dcop-module-federation%2540workspace%253A."
-  checksum: 3565913f07893034b2fff489cbdc672430f3a5a4d874ed655f3b6884d4bb3e86db5c21d33abecf13b6ab24b8363262c4d5523323815f2e4083d9154f2f84891e
-=======
   resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=cop-module-federation%40workspace%3A."
   checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
   languageName: node
@@ -12692,46 +12681,22 @@ __metadata:
   version: 1.0.0
   resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2FButtonFav%23..%2F..%2Fcomponents%2FButtonFav%3A%3Ahash%3D415faf%26locator%3Dcop-module-federation%2540workspace%253A."
   checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
->>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
 "nf-ecomm-components@file:../../components/shared-ui::locator=cop-module-federation%40workspace%3A.":
   version: 0.1.0
-<<<<<<< Updated upstream
-  resolution: "nf-ecomm-components@file:../../components/shared-ui#../../components/shared-ui::hash=eb644c&locator=cop-module-federation%40workspace%3A."
-=======
   resolution: "nf-ecomm-components@file:../../components/ButtonFav#../../components/ButtonFav::hash=415faf&locator=cop-module-federation%40workspace%3A."
->>>>>>> Stashed changes
   dependencies:
     nf-ecomm-api: ../../middlewares/api
     nf-ecomm-frame: ../Frame
     react: ^17.0.2
-<<<<<<< Updated upstream
-  checksum: 8bfe14a8df7245e91840987b533b4511d22bf337e38f02f57d651cd595b00e4d34da51daff2641d2030e92e41d54cd68ac64264b0d9fb65e6b244c5383f736b3
-=======
   checksum: 355fee874718b3c0a3e740e128a1f77b994657da0b9085a9d87dac677e8c7742ea904b71dbcaf4238afbcec9838473e50ff83cf41b1ad050a4bed0d7413bb241
->>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
 "nf-ecomm-frame@file:../../components/frame::locator=cop-module-federation%40workspace%3A.":
   version: 0.1.0
-<<<<<<< Updated upstream
-  resolution: "nf-ecomm-frame@file:../../components/frame#../../components/frame::hash=94e512&locator=cop-module-federation%40workspace%3A."
-  dependencies:
-    react: ^17.0.2
-  checksum: 3b2930a30335449d15fe539b6be10d347906c74074309708d3eef1929da385ff833f3aa666405749a4d5a1de4b0902426981da7f49212936065137eaaaf6f07f
-  languageName: node
-  linkType: hard
-
-"nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Deb644c%26locator%3Dcop-module-federation%2540workspace%253A.":
-  version: 0.1.0
-  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=94e512&locator=nf-ecomm-components%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Deb644c%26locator%3Dcop-module-federation%2540workspace%253A."
-  dependencies:
-    react: ^17.0.2
-  checksum: 3b2930a30335449d15fe539b6be10d347906c74074309708d3eef1929da385ff833f3aa666405749a4d5a1de4b0902426981da7f49212936065137eaaaf6f07f
-=======
   resolution: "nf-ecomm-frame@file:../../components/Frame#../../components/Frame::hash=66e6e6&locator=cop-module-federation%40workspace%3A."
   dependencies:
     react: ^17.0.2
@@ -12745,7 +12710,6 @@ __metadata:
   dependencies:
     react: ^17.0.2
   checksum: ffd318525a47acf02bf26aaba18948204207a7dfcb4eeb3a6469341a2a053aea6b1b8a5d30088a5a58f8a3158bcc7caeed4d81db9bcab7a687fcb6b923c43773
->>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
