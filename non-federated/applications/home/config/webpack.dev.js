@@ -8,7 +8,7 @@ const devConfig = {
     devServer: {
         port: '8090',
         contentBase: './dist',
-        open: 'chrome',
+        open: true,
         historyApiFallback: true,
         hot: true
     },

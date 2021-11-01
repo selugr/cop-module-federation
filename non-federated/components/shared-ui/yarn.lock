@@ -6894,8 +6894,8 @@ __metadata:
 
 "nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-components%40workspace%3A.":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=f776cb&locator=nf-ecomm-components%40workspace%3A."
-  checksum: 94d2162e0b8f535ff475e2d77399b7c39509581ef3af42609bb90a773860384f2091c254ceeaa1432a793faedbf4c20c6d51f97f1a75c41049fe5a7e487625cf
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=46f413&locator=nf-ecomm-components%40workspace%3A."
+  checksum: 27aacb014666832a39b8405946d870d4e4e7be9dacbe707150b8c55c9b2a5b8a4175150a9c8185b04c66dd5111a2b51264b6dca04f11cb27257ad3bab6719ed0
   languageName: node
   linkType: hard
 
@@ -6945,10 +6945,10 @@ __metadata:
 
 "nf-ecomm-frame@file:../Frame::locator=nf-ecomm-components%40workspace%3A.":
   version: 0.1.0
-  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=66e6e6&locator=nf-ecomm-components%40workspace%3A."
+  resolution: "nf-ecomm-frame@file:../Frame#../Frame::hash=e5551c&locator=nf-ecomm-components%40workspace%3A."
   dependencies:
     react: ^17.0.2
-  checksum: ffd318525a47acf02bf26aaba18948204207a7dfcb4eeb3a6469341a2a053aea6b1b8a5d30088a5a58f8a3158bcc7caeed4d81db9bcab7a687fcb6b923c43773
+  checksum: 00f028b07c109b93513a3b8c524ab5cad8f19037f295a8860b957ce0bf1439f48d0f1a3160ec580ae730db6e1b2ec825c6b67fa86562ca8970e6021022af7094
   languageName: node
   linkType: hard
 

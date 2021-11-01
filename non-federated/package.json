@@ -4,9 +4,8 @@
   "private": true,
   "workspaces": [
     "applications/*",
-    "shared-ui/*",
-    "logic/*",
-    "services/*"
+    "components/*",
+    "middlewares/*"
   ],
   "scripts": {
     "wipe": "rm -fr node_modules packages/**/node_modules",
