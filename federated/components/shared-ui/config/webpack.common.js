@@ -1,19 +1,16 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-  experiments: {
-    outputModule: true
+   optimization: {
+    minimize: false,
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'main.js',
-    publicPath: '/',
-    library: {
-      type: 'module'
-    }
+    publicPath: "auto",
+    clean: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -32,6 +29,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new ModuleFederationPlugin({
+      name: 'sharedUi',
+      filename: "remoteEntry.js",
+      exposes: {
+        "./ButtonFav": "./src/ButtonFav",
+        "./Loader": "./src/Loader"
+      },
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
       template: './public/index.html',

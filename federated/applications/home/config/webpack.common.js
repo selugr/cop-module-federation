@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' )
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' )
+const { ModuleFederationPlugin } = require("webpack").container;
 const path = require( 'path' )
 
 module.exports = {
@@ -26,6 +27,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: "home",
+            remotes: {
+                sharedUi: "sharedUi@http://localhost:8095/remoteEntry.js",
+            },
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin( {
             template: './public/index.html',

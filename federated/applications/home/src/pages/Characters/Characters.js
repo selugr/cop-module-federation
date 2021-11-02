@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense, lazy } from 'react'
 import Search from '../../components/Search/Search'
 import Card from '../../components/Card/Card'
-import { Loader } from 'nf-ecomm-shared-ui'
 import { getCharacters } from 'nf-ecomm-api'
 import './Characters.css'
-import 'nf-ecomm-shared-ui/dist/main.css'
+
+const Loader = lazy(() => import("sharedUi/Loader"));
 
 const Characters = () => {
     const [characters, setCharacters] = useState([])
@@ -44,7 +44,9 @@ const Characters = () => {
     if ( !characters || !characters.length || ( !filteredCharacters.length && !filters.length ) ) {
         return (
             <div className="loader-container">
-                <Loader/>
+                <Suspense fallback={"loading..."}>
+                    <Loader/>
+                </Suspense> 
             </div>
         )
     }

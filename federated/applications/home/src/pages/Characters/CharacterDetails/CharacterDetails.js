@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense, lazy } from 'react'
 import { useParams } from 'react-router-dom'
-import { getCharacterById, addCharacterToFav, getFavs } from 'nf-ecomm-api'
+import { getCharacterById, addCharacterToFav } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
-import { Loader, ButtonFav } from 'nf-ecomm-shared-ui'
 import './CharacterDetails.css'
-import 'nf-ecomm-shared-ui/dist/main.css'
+
+const Loader = lazy(() => import("sharedUi/Loader"));
+const ButtonFav = lazy(() => import("sharedUi/ButtonFav"));
 
 const CharacterDetails = () => {
     const [available, setAvailable] = useState( true )
@@ -47,7 +48,11 @@ const CharacterDetails = () => {
     if ( !character || character.id != characterId ) {
         return (
             <div className="loader-container">
-                {available ? <Loader/> : <h1 className="text-title">This character didn't ever exist in any possible reality</h1>}
+                {available 
+                ? <Suspense fallback={"loading..."}>
+                    <Loader />
+                </Suspense>
+                : <h1 className="text-title">This character didn't ever exist in any possible reality</h1>}
             </div>
         )
     }    
@@ -74,11 +79,13 @@ const CharacterDetails = () => {
                         <h2>LOCATION:</h2>
                         <p>{character.location.name}</p>
                     </section>
-                    <ButtonFav 
-                        onClick={handleOnClick}
-                        character={character}
-                        active={isFavorite}
-                    />
+                    <Suspense fallback={"<3"}>
+                        <ButtonFav 
+                            onClick={handleOnClick}
+                            character={character}
+                            active={isFavorite}
+                        />
+                    </Suspense>
                 </div>
             </div>
         </div>
