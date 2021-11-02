@@ -11,7 +11,7 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --fix & stylelint \"src/**/*.css\" --fix",
-    "serve": "serve -s ./dist/ -l 8080"
+    "serve": "serve -s ./dist/ -l 8095"
   },
   "keywords": [],
   "license": "ISC",
