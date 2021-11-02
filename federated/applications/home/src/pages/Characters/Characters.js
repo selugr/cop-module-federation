@@ -4,6 +4,7 @@ import Card from '../../components/Card/Card'
 import { Loader } from 'nf-ecomm-shared-ui'
 import { getCharacters } from 'nf-ecomm-api'
 import './Characters.css'
+import 'nf-ecomm-shared-ui/dist/main.css'
 
 const Characters = () => {
     const [characters, setCharacters] = useState([])

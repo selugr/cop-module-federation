@@ -4,6 +4,7 @@ const { merge } = require( 'webpack-merge' )
 const common = require( './webpack.common' )
 
 const devConfig = {
+    entry: './src/start.js',
     mode: 'development',
     devServer: {
         port: '8095',

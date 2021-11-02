@@ -1,15 +1,27 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getCharacterById } from 'nf-ecomm-api'
+import { getCharacterById, addCharacterToFav, getFavs } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
 import { Loader, ButtonFav } from 'nf-ecomm-shared-ui'
 import './CharacterDetails.css'
+import 'nf-ecomm-shared-ui/dist/main.css'
 
 const CharacterDetails = () => {
     const [available, setAvailable] = useState( true )
-    const { characterId } = useParams()
-
+    const [isFavorite, setIsFavorite] = useState(false)
     const [character, setCharacter] = useState()
+    const { characterId } = useParams()
+    const { characterFavs } = useGlobalContext([])
+    const globalUpdateContext = useGlobalUpdateContext()
+
+    const handleOnClick = async ()=>{
+        globalUpdateContext( {
+            type: GLOBALACTIONS.SET_CHARACTER_FAVS,
+            payload: {
+                characterFavs: await addCharacterToFav(character)
+            }
+        } )
+    }
 
     useEffect( () => {
         ( async () => {
@@ -25,6 +37,12 @@ const CharacterDetails = () => {
             }
         } )()
     }, [characterId] )
+    
+    useEffect(()=>{
+        if (character) {
+            setIsFavorite(!!characterFavs.find(c => c.id === character.id))
+        }
+    }, [characterFavs, character])
 
     if ( !character || character.id != characterId ) {
         return (
@@ -32,7 +50,7 @@ const CharacterDetails = () => {
                 {available ? <Loader/> : <h1 className="text-title">This character didn't ever exist in any possible reality</h1>}
             </div>
         )
-    }
+    }    
 
     return (
         <div className="character-container">
@@ -57,14 +75,9 @@ const CharacterDetails = () => {
                         <p>{character.location.name}</p>
                     </section>
                     <ButtonFav 
-                        context={
-                            {
-                                GLOBALACTIONS, 
-                                useGlobalContext, 
-                                useGlobalUpdateContext 
-                            }
-                        } 
+                        onClick={handleOnClick}
                         character={character}
+                        active={isFavorite}
                     />
                 </div>
             </div>
