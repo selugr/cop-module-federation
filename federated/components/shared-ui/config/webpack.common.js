@@ -4,15 +4,12 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-  experiments: {
-    outputModule: true
-  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'main.js',
     publicPath: '/',
     library: {
-      type: 'module'
+      type: 'commonjs2'
     }
   },
   resolve: {
