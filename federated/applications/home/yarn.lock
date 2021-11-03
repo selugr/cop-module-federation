@@ -12693,9 +12693,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Ddbef65%26locator%3Dcop-module-federation%2540workspace%253A.":
+"nf-ecomm-api@file:../../middlewares/api::locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Da43d0c%26locator%3Dcop-module-federation%2540workspace%253A.":
   version: 1.0.0
-  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=7628db&locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Ddbef65%26locator%3Dcop-module-federation%2540workspace%253A."
+  resolution: "nf-ecomm-api@file:../../middlewares/api#../../middlewares/api::hash=7628db&locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Da43d0c%26locator%3Dcop-module-federation%2540workspace%253A."
   checksum: 0e215b0cab5b191b4a574c18e66e199953d99193f52eac73920738eee611cd66679f58b2c4417ba5087e8ab63b15d7a6f16c06c3b5afccc97e21873397037a89
   languageName: node
   linkType: hard
@@ -12710,9 +12710,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nf-ecomm-frame@file:../frame::locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Ddbef65%26locator%3Dcop-module-federation%2540workspace%253A.":
+"nf-ecomm-frame@file:../frame::locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Da43d0c%26locator%3Dcop-module-federation%2540workspace%253A.":
   version: 0.1.0
-  resolution: "nf-ecomm-frame@file:../frame#../frame::hash=5525b8&locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Ddbef65%26locator%3Dcop-module-federation%2540workspace%253A."
+  resolution: "nf-ecomm-frame@file:../frame#../frame::hash=5525b8&locator=nf-ecomm-shared-ui%40file%3A..%2F..%2Fcomponents%2Fshared-ui%23..%2F..%2Fcomponents%2Fshared-ui%3A%3Ahash%3Da43d0c%26locator%3Dcop-module-federation%2540workspace%253A."
   dependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -12722,14 +12722,14 @@ __metadata:
 
 "nf-ecomm-shared-ui@file:../../components/shared-ui::locator=cop-module-federation%40workspace%3A.":
   version: 0.1.0
-  resolution: "nf-ecomm-shared-ui@file:../../components/shared-ui#../../components/shared-ui::hash=dbef65&locator=cop-module-federation%40workspace%3A."
+  resolution: "nf-ecomm-shared-ui@file:../../components/shared-ui#../../components/shared-ui::hash=a43d0c&locator=cop-module-federation%40workspace%3A."
   dependencies:
     nf-ecomm-api: ../../middlewares/api
     nf-ecomm-frame: ../frame
     react: ^17.0.2
     react-dom: ^17.0.2
     react-icons: ^4.3.1
-  checksum: 8ebe83735ab5e47189006d8e07ad1e9a48a5c562d40a3a8b3d0d50701544f24ff470d63f5597180cff1064165d1d06f84f571f5fc56ad6b39f90e55e080eba9c
+  checksum: a69b7f0ac801f6f82b1ee38b84eb893521ce1406245f3ec9f55a37de201ea79dd31b24090376d05892f246131a3a3827414443ac8ef07a9e84a6c56f53ad7d1e
   languageName: node
   linkType: hard
 
