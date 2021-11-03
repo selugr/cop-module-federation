@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { NavLink } from 'react-router-dom'
 import portal from '../../res/img/logo.png'
-import { ButtonFav } from 'nf-ecomm-shared-ui'
 import { addCharacterToFav, getFavs } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
 import './Card.css'
 import 'nf-ecomm-shared-ui/dist/main.css'
+
+const ButtonFav = lazy(() => import("sharedUi/ButtonFav"));
 
 const Card = ( { character } ) => {
     const { characterFavs } = useGlobalContext([])
@@ -32,11 +33,13 @@ const Card = ( { character } ) => {
 
     return (
         <article className="card-container">
-            <ButtonFav 
-                onClick={handleOnClick}
-                character={character}
-                active={isFavorite}
-            />
+            <Suspense fallback="<3">
+                <ButtonFav 
+                    onClick={handleOnClick}
+                    character={character}
+                    active={isFavorite}
+                />
+            </ Suspense>
             <NavLink className="item" to={ `/characters/${character.id}` } >
                 <div className="picture">
                     <img className="frame" src={ portal } alt={ character.name } />
