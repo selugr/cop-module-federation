@@ -10,6 +10,8 @@ module.exports = {
   },
   output: {
     publicPath: "auto",
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'main.js',
     clean: true,
   },
   resolve: {
@@ -36,6 +38,9 @@ module.exports = {
         "./ButtonFav": "./src/ButtonFav",
         "./Loader": "./src/Loader"
       },
+      remotes: {
+        sharedUi: "sharedUi@http://localhost:8095/remoteEntry.js"
+      }
     }),
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
