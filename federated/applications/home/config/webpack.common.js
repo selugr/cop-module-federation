@@ -1,13 +1,15 @@
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' )
+const { ModuleFederationPlugin } = require("webpack").container
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' )
 const path = require( 'path' )
 
+const deps = require("../package.json").dependencies;
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/entry.js',
     output: {
         path: path.resolve( __dirname, '../dist' ),
-        filename: '[name].[contenthash].js',
-        publicPath: '/'
+        filename: 'main.js',
+        publicPath: 'http://localhost:8091/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
@@ -26,6 +28,41 @@ module.exports = {
         ]
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: "home",
+            filename: "remoteEntry.js",
+            remotes: {
+                home: "home@http://localhost:8091/remoteEntry.js",
+                itemsList: "itemsList@http://localhost:8092/remoteEntry.js",
+                itemDetails: "itemDetails@http://localhost:8093/remoteEntry.js",
+            },
+            exposes: {
+                "./App": "./src/App",
+            },
+            shared: [{
+                "react-router-dom": {
+                    singleton: true,
+                    requiredVersion: deps["react-router-dom"],
+                },
+                "nf-ecomm-frame": {
+                    singleton: true,
+                    requiredVersion: deps["nf-ecomm-frame"],
+                },
+                "nf-ecomm-api": {
+                    singleton: true,
+                    requiredVersion: deps["nf-ecomm-api"],
+                },
+                react: {
+                    singleton: true,
+                    requiredVersion: deps.react,
+                },
+                "react-dom": {
+                    singleton: true,
+                    requiredVersion: deps["react-dom"],
+                },
+                },
+            ],
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin( {
             template: './public/index.html',

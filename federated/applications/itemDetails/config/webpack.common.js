@@ -1,13 +1,15 @@
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' )
+const { ModuleFederationPlugin } = require("webpack").container
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' )
 const path = require( 'path' )
 
+const deps = require("../package.json").dependencies;
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/entry.js',
     output: {
         path: path.resolve( __dirname, '../dist' ),
-        filename: '[name].[contenthash].js',
-        publicPath: '/'
+        filename: 'main.js',
+        publicPath: 'http://localhost:8093/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
@@ -26,6 +28,40 @@ module.exports = {
         ]
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: "itemDetails",
+            filename: "remoteEntry.js",
+            remotes: {
+                home: "home@http://localhost:8091/remoteEntry.js",
+                sharedUi: "sharedUi@http://localhost:8097/remoteEntry.js",
+            },
+            exposes: {
+                "./CharacterDetails": "./src/CharacterDetails"
+            },
+            shared: [{
+                "react-router-dom": {
+                    singleton: true,
+                    requiredVersion: deps["react-router-dom"],
+                },
+                "nf-ecomm-frame": {
+                    singleton: true,
+                    requiredVersion: deps["nf-ecomm-frame"],
+                },
+                "nf-ecomm-api": {
+                    singleton: true,
+                    requiredVersion: deps["nf-ecomm-api"],
+                },
+                react: {
+                    singleton: true,
+                    requiredVersion: deps.react,
+                },
+                "react-dom": {
+                    singleton: true,
+                    requiredVersion: deps["react-dom"],
+                },
+                },
+            ],
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin( {
             template: './public/index.html'

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getCharacterById } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
-import { Loader, ButtonFav } from 'nf-ecomm-shared-ui'
+import Loader from 'sharedUi/Loader'
+import ButtonFav from 'sharedUi/ButtonFav'
 import './CharacterDetails.css'
 
 const CharacterDetails = () => {

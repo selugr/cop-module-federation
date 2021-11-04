@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import Search from '../../components/Search/Search'
-import Card from '../../components/Card/Card'
-import { Loader } from 'nf-ecomm-shared-ui'
+import Search from './Search/Search'
+import Card from './Card/Card'
 import { getCharacters } from 'nf-ecomm-api'
+import Loader from 'sharedUi/Loader'
 import './Characters.css'
 
 const Characters = () => {
@@ -56,7 +56,7 @@ const Characters = () => {
                     {filteredCharacters}
                 </ul>
                 : <div className="loader-container">
-                    <h1>There's no characters with such name in the whole multiverse!</h1>
+                    <h1 className="text-title">There's no characters with such name in the whole multiverse!</h1>
                 </div>
             }
         </div>

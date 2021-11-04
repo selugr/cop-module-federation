@@ -1,5 +1,7 @@
-import Characters from './pages/Characters/Characters'
-import CharacterDetails from './pages/Characters/CharacterDetails/CharacterDetails'
+import Characters from 'itemsList/Characters'
+import CharacterDetails from 'itemDetails/CharacterDetails'
+import Main from './components/Main/Main'
+import ErrorRoute from './components/ErrorRoute/ErrorRoute'
 
 export default [
     {
@@ -11,7 +13,11 @@ export default [
         Component: Characters
     },
     {
+        path: '/',
+        Component: Main
+    },
+    {
         path: '*',
-        Component: Characters
+        Component: ErrorRoute
     },
 ]
