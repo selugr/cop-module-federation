@@ -34,7 +34,6 @@ const Card = ( { character } ) => {
         <article className="card-container">
             <ButtonFav 
                 onClick={handleOnClick}
-                character={character}
                 active={isFavorite}
             />
             <NavLink className="item" to={ `/characters/${character.id}` } >
