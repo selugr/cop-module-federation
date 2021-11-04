@@ -76,7 +76,6 @@ const CharacterDetails = () => {
                     </section>
                     <ButtonFav 
                         onClick={handleOnClick}
-                        character={character}
                         active={isFavorite}
                     />
                 </div>
