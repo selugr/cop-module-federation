@@ -1,0 +1,32 @@
+.error-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.error-container::before {
+    z-index: -1;
+    background-color: var(--color-1-t);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+}
+
+.error-container > h1 {
+    font-size: 5rem;
+}
+
+.error-container > p {
+    color: var(--color-white);
+    text-align: center;
+}
+
+.error-container > img {
+    width: 10rem;
+}

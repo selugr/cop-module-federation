@@ -1,27 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getCharacterById, addCharacterToFav, getFavs } from 'nf-ecomm-api'
+import { getCharacterById } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
-import { Loader, ButtonFav } from 'nf-ecomm-shared-ui'
+import Loader from 'sharedUi/Loader'
+import ButtonFav from 'sharedUi/ButtonFav'
+import Slider from 'slider/slider'
 import './CharacterDetails.css'
-import 'nf-ecomm-shared-ui/dist/main.css'
 
 const CharacterDetails = () => {
     const [available, setAvailable] = useState( true )
-    const [isFavorite, setIsFavorite] = useState(false)
-    const [character, setCharacter] = useState()
     const { characterId } = useParams()
-    const { characterFavs } = useGlobalContext([])
-    const globalUpdateContext = useGlobalUpdateContext()
 
-    const handleOnClick = async ()=>{
-        globalUpdateContext( {
-            type: GLOBALACTIONS.SET_CHARACTER_FAVS,
-            payload: {
-                characterFavs: await addCharacterToFav(character)
-            }
-        } )
-    }
+    const [character, setCharacter] = useState()
 
     useEffect( () => {
         ( async () => {
@@ -37,12 +27,6 @@ const CharacterDetails = () => {
             }
         } )()
     }, [characterId] )
-    
-    useEffect(()=>{
-        if (character) {
-            setIsFavorite(!!characterFavs.find(c => c.id === character.id))
-        }
-    }, [characterFavs, character])
 
     if ( !character || character.id != characterId ) {
         return (
@@ -50,10 +34,11 @@ const CharacterDetails = () => {
                 {available ? <Loader/> : <h1 className="text-title">This character didn't ever exist in any possible reality</h1>}
             </div>
         )
-    }    
+    }
 
     return (
         <div className="character-container">
+            <Slider/>
             <div className="character-grid">
                 <div className="picture">
                     <img src={ character.image } alt={ character.name } />
@@ -75,8 +60,14 @@ const CharacterDetails = () => {
                         <p>{character.location.name}</p>
                     </section>
                     <ButtonFav 
-                        onClick={handleOnClick}
-                        active={isFavorite}
+                        context={
+                            {
+                                GLOBALACTIONS, 
+                                useGlobalContext, 
+                                useGlobalUpdateContext 
+                            }
+                        } 
+                        character={character}
                     />
                 </div>
             </div>

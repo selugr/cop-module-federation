@@ -1,5 +1,5 @@
 {
-  "name": "cop-module-federation",
+  "name": "items-list",
   "packageManager": "yarn@3.1.0",
   "author": "Selugr",
   "version": "0.1.0",
@@ -11,7 +11,7 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --fix & stylelint \"src/**/*.css\" --fix",
-    "serve": "serve -s ./dist/ -l 8080"
+    "serve": "serve -s ./dist/ -l 8092"
   },
   "keywords": [],
   "license": "ISC",
@@ -19,17 +19,14 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
     "nf-ecomm-api": "../../middlewares/api",
-    "nf-ecomm-shared-ui": "../../components/shared-ui",
     "nf-ecomm-frame": "../../components/frame",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "use-react-router-breadcrumbs": "^2.0.2"
+    "react-scripts": "4.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -37,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@module-federation/dashboard-plugin": "^2.3.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@testing-library/dom": "^8.10.1",
     "@testing-library/jest-dom": "^5.14.1",

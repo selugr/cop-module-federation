@@ -1,4 +1,10 @@
-import ButtonFav from "./ButtonFav";
-import Loader from "./Loader";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Loader from './Loader'
 
-export { ButtonFav, Loader };
+ReactDOM.render(
+    <React.StrictMode>
+        <Loader/>
+    </React.StrictMode>,
+    document.getElementById( 'root' )
+)

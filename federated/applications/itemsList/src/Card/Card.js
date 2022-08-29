@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import portal from '../../res/img/logo.png'
-import { ButtonFav } from 'nf-ecomm-shared-ui'
+import portal from './portal.png'
+import ButtonFav from 'sharedUi/ButtonFav'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
 import './Card.css'
 

@@ -4,13 +4,11 @@ import {
     Route
 } from 'react-router-dom'
 import Header from './components/Header/Header'
-import routes from './routes'
 import { GlobalProvider } from 'nf-ecomm-frame'
 import './App.css'
 
-const App = () => {
+const App = ({routes}) => {
     return (
-
         <GlobalProvider>
             <Router>
                 <Header/>

@@ -1,0 +1,23 @@
+.main-container {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header {
+    max-height: 35rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.main-header > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-content {
+    margin-top: 5rem;
+}

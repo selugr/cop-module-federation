@@ -4,7 +4,11 @@ const common = require( './webpack.common' )
 
 const prodConfig = {
     mode: 'production',
-    target: 'web',
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     module: {
         rules: [
             {
