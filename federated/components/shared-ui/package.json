@@ -4,21 +4,22 @@
   "author": "Selugr",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/main.*.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --fix & stylelint \"src/**/*.css\" --fix",
-    "serve": "serve -s ./dist/ -l 8080"
+    "serve": "serve -s ./dist/ -l 8097"
   },
   "keywords": [],
   "license": "ISC",
   "dependencies": {
     "nf-ecomm-api": "../../middlewares/api",
     "nf-ecomm-frame": "../frame",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
@@ -27,6 +28,7 @@
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@module-federation/dashboard-plugin": "^2.3.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -34,6 +36,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^6.2.0",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",

@@ -1,18 +1,16 @@
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' )
 const { ModuleFederationPlugin } = require("webpack").container
+const DashboardPlugin = require("@module-federation/dashboard-plugin")
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' )
 const path = require( 'path' )
 
 const deps = require("../package.json").dependencies;
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/entry.js',
     output: {
         path: path.resolve( __dirname, '../dist' ),
-        filename: '[name].[contenthash].js',
-        library: {
-            type: 'commonjs2'
-        },
-        publicPath: 'auto'
+        filename: 'main.js',
+        publicPath: 'http://localhost:8097/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
@@ -41,11 +39,11 @@ module.exports = {
             shared: [{
                 "nf-ecomm-frame": {
                     singleton: true,
-                    requiredVersion: deps["nf-ecomm-frame"],
+                    requiredVersion: "1.0.0",
                 },
                 "nf-ecomm-api": {
                     singleton: true,
-                    requiredVersion: deps["nf-ecomm-api"],
+                    requiredVersion: "1.0.0",
                 },
                 react: {
                     singleton: true,
@@ -57,6 +55,15 @@ module.exports = {
                 },
                 },
             ],
+        }),
+        new DashboardPlugin({
+            dashboardURL: "http://localhost:3000/api/update",
+            metadata: {
+                source: {
+                    url: "http://github.com"
+                },
+                remote: "http://localhost:8097/remoteEntry.js" 
+            }
         }),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin( {

@@ -4,6 +4,7 @@ import { getCharacterById } from 'nf-ecomm-api'
 import { GLOBALACTIONS, useGlobalContext, useGlobalUpdateContext } from 'nf-ecomm-frame'
 import Loader from 'sharedUi/Loader'
 import ButtonFav from 'sharedUi/ButtonFav'
+import Slider from 'slider/slider'
 import './CharacterDetails.css'
 
 const CharacterDetails = () => {
@@ -37,6 +38,7 @@ const CharacterDetails = () => {
 
     return (
         <div className="character-container">
+            <Slider/>
             <div className="character-grid">
                 <div className="picture">
                     <img src={ character.image } alt={ character.name } />
